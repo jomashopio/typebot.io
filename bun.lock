@@ -607,7 +607,7 @@
     },
     "packages/embeds/js": {
       "name": "@typebot.io/js",
-      "version": "0.10.5",
+      "version": "0.10.7",
       "devDependencies": {
         "@ai-sdk/ui-utils": "^1.2.11",
         "@ark-ui/solid": "^5.19.0",
@@ -642,7 +642,7 @@
     },
     "packages/embeds/react": {
       "name": "@typebot.io/react",
-      "version": "0.10.5",
+      "version": "0.10.7",
       "dependencies": {
         "@typebot.io/js": "workspace:*",
         "react": "^19.2.4",
@@ -832,6 +832,16 @@
         "@types/react": "^19.2.14",
       },
     },
+    "packages/forge/blocks/nurixChat": {
+      "name": "@typebot.io/nurix-chat-block",
+      "version": "1.0.0",
+      "dependencies": {
+        "@typebot.io/forge": "workspace:*",
+      },
+      "devDependencies": {
+        "@types/react": "^19.2.14",
+      },
+    },
     "packages/forge/blocks/openRouter": {
       "name": "@typebot.io/open-router-block",
       "version": "1.0.0",
@@ -968,6 +978,7 @@
         "@typebot.io/groq-block": "workspace:*",
         "@typebot.io/mistral-block": "workspace:*",
         "@typebot.io/nocodb-block": "workspace:*",
+        "@typebot.io/nurix-chat-block": "workspace:*",
         "@typebot.io/open-router-block": "workspace:*",
         "@typebot.io/openai-block": "workspace:*",
         "@typebot.io/perplexity-block": "workspace:*",
@@ -3221,6 +3232,8 @@
     "@typebot.io/mistral-block": ["@typebot.io/mistral-block@workspace:packages/forge/blocks/mistral"],
 
     "@typebot.io/nocodb-block": ["@typebot.io/nocodb-block@workspace:packages/forge/blocks/nocodb"],
+
+    "@typebot.io/nurix-chat-block": ["@typebot.io/nurix-chat-block@workspace:packages/forge/blocks/nurixChat"],
 
     "@typebot.io/open-router-block": ["@typebot.io/open-router-block@workspace:packages/forge/blocks/openRouter"],
 

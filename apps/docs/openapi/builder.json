@@ -674,6 +674,9 @@
                             "$ref": "#/components/schemas/ChatNode"
                           },
                           {
+                            "$ref": "#/components/schemas/NurixChat"
+                          },
+                          {
                             "$ref": "#/components/schemas/QrCode"
                           },
                           {
@@ -2333,6 +2336,9 @@
                           },
                           {
                             "$ref": "#/components/schemas/ChatNode"
+                          },
+                          {
+                            "$ref": "#/components/schemas/NurixChat"
                           },
                           {
                             "$ref": "#/components/schemas/QrCode"
@@ -8812,6 +8818,84 @@
         },
         "required": [
           "action"
+        ]
+      },
+      "NurixChat": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "outgoingEdgeId": {
+            "type": "string"
+          },
+          "type": {
+            "const": "nurix-chat"
+          },
+          "options": {
+            "anyOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "credentialsId": {
+                    "type": "string"
+                  },
+                  "action": {
+                    "not": {}
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "credentialsId": {
+                    "type": "string"
+                  },
+                  "action": {
+                    "const": "Send Message"
+                  },
+                  "widgetId": {
+                    "type": "string"
+                  },
+                  "userId": {
+                    "type": "string"
+                  },
+                  "message": {
+                    "type": "string"
+                  },
+                  "idempotencyKey": {
+                    "type": "string"
+                  },
+                  "responseMapping": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "item": {
+                          "enum": [
+                            "Message",
+                            "Conversation ID",
+                            "Message ID"
+                          ],
+                          "type": "string"
+                        },
+                        "variableId": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                },
+                "required": [
+                  "action"
+                ]
+              }
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "type"
         ]
       },
       "QrCode": {
@@ -22074,6 +22158,9 @@
                             "$ref": "#/components/schemas/ChatNode"
                           },
                           {
+                            "$ref": "#/components/schemas/NurixChat"
+                          },
+                          {
                             "$ref": "#/components/schemas/QrCode"
                           },
                           {
@@ -24371,6 +24458,9 @@
                                               },
                                               {
                                                 "$ref": "#/components/schemas/ChatNode"
+                                              },
+                                              {
+                                                "$ref": "#/components/schemas/NurixChat"
                                               },
                                               {
                                                 "$ref": "#/components/schemas/QrCode"
@@ -29594,6 +29684,9 @@
                                         "$ref": "#/components/schemas/ChatNode"
                                       },
                                       {
+                                        "$ref": "#/components/schemas/NurixChat"
+                                      },
+                                      {
                                         "$ref": "#/components/schemas/QrCode"
                                       },
                                       {
@@ -31881,6 +31974,9 @@
                                         },
                                         {
                                           "$ref": "#/components/schemas/ChatNode"
+                                        },
+                                        {
+                                          "$ref": "#/components/schemas/NurixChat"
                                         },
                                         {
                                           "$ref": "#/components/schemas/QrCode"
@@ -35311,6 +35407,9 @@
                                             },
                                             {
                                               "$ref": "#/components/schemas/ChatNode"
+                                            },
+                                            {
+                                              "$ref": "#/components/schemas/NurixChat"
                                             },
                                             {
                                               "$ref": "#/components/schemas/QrCode"
@@ -39350,6 +39449,9 @@
                                             "$ref": "#/components/schemas/ChatNode"
                                           },
                                           {
+                                            "$ref": "#/components/schemas/NurixChat"
+                                          },
+                                          {
                                             "$ref": "#/components/schemas/QrCode"
                                           },
                                           {
@@ -43348,6 +43450,9 @@
                                           "$ref": "#/components/schemas/ChatNode"
                                         },
                                         {
+                                          "$ref": "#/components/schemas/NurixChat"
+                                        },
+                                        {
                                           "$ref": "#/components/schemas/QrCode"
                                         },
                                         {
@@ -47296,6 +47401,9 @@
                                                 },
                                                 {
                                                   "$ref": "#/components/schemas/ChatNode"
+                                                },
+                                                {
+                                                  "$ref": "#/components/schemas/NurixChat"
                                                 },
                                                 {
                                                   "$ref": "#/components/schemas/QrCode"
@@ -51415,6 +51523,9 @@
                                             "$ref": "#/components/schemas/ChatNode"
                                           },
                                           {
+                                            "$ref": "#/components/schemas/NurixChat"
+                                          },
+                                          {
                                             "$ref": "#/components/schemas/QrCode"
                                           },
                                           {
@@ -55170,6 +55281,9 @@
                                         },
                                         {
                                           "$ref": "#/components/schemas/ChatNode"
+                                        },
+                                        {
+                                          "$ref": "#/components/schemas/NurixChat"
                                         },
                                         {
                                           "$ref": "#/components/schemas/QrCode"
@@ -77084,6 +77198,9 @@
                                               },
                                               {
                                                 "$ref": "#/components/schemas/ChatNode"
+                                              },
+                                              {
+                                                "$ref": "#/components/schemas/NurixChat"
                                               },
                                               {
                                                 "$ref": "#/components/schemas/QrCode"

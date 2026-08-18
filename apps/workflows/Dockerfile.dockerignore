@@ -84,6 +84,8 @@
 !packages/forge/blocks/calCom/**
 !packages/forge/blocks/chatNode
 !packages/forge/blocks/chatNode/**
+!packages/forge/blocks/nurixChat
+!packages/forge/blocks/nurixChat/**
 !packages/forge/blocks/deepseek
 !packages/forge/blocks/deepseek/**
 !packages/forge/blocks/difyAi

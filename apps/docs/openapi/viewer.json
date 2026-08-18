@@ -8242,6 +8242,30 @@
                                                     "type": "string"
                                                   },
                                                   "type": {
+                                                    "const": "nurix-chat"
+                                                  },
+                                                  "options": {
+                                                    "anyOf": [
+                                                      {},
+                                                      {}
+                                                    ]
+                                                  }
+                                                },
+                                                "required": [
+                                                  "id",
+                                                  "type"
+                                                ]
+                                              },
+                                              {
+                                                "type": "object",
+                                                "properties": {
+                                                  "id": {
+                                                    "type": "string"
+                                                  },
+                                                  "outgoingEdgeId": {
+                                                    "type": "string"
+                                                  },
+                                                  "type": {
                                                     "const": "qr-code"
                                                   },
                                                   "options": {
