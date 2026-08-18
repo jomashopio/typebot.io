@@ -8875,7 +8875,8 @@
                           "enum": [
                             "Message",
                             "Conversation ID",
-                            "Message ID"
+                            "Message ID",
+                            "Conversation state"
                           ],
                           "type": "string"
                         },
